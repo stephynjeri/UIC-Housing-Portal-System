@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+.navbar{
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(63, 62, 62);
+}
+
+body{
+    background-color: whitesmoke;
+}
+.side-nav{
+    width: 10%;
+    background-color: rgb(63, 62, 62);
+    height: 93vh;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.sideUL li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.sideUL li a{
+    text-decoration: none;
+    color: gray;
+}
+.admin-main{
+    display: flex;
+    width: 100%;
+}
+.barMain{
+    padding: 20px;
+    width: 100%;
+}
+
+.hUl li{
+    width: 100%;
+    list-style: none;
+    background-color: white;
+    box-shadow: 3px 4px 5px rgb(211, 208, 208);
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    border-top-right-radius: 10px;
+    box-shadow: 4px 5px 5px rgb(59, 58, 58);
+    border: 2px solid rgb(59, 58, 58);
+    color: rgb(59, 58, 58);
+}
+.btnEdit{
+    cursor: pointer;
+    width: 200px;
+    background-color: rgb(59, 58, 58);
+    border-radius: 6px;
+    border: none;
+    padding: 6px;
+    color: white;
+}
+.btnDelete{
+    width: 200px;
+    background-color: rgb(197, 86, 86);
+    border-radius: 6px;
+    border: none;
+    padding: 6px;
+    color: white;
+    cursor: pointer;
+}
+.heitScroll{
+    height: 85vh;
+    overflow: scroll;
+}
+.hUl{
+    width: 100%;
+    
+}
+.top-bar{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+.admin-main-content{
+    width: 90%;
+}
+.table1{
+    width: 100%;
+}
+.table1 thead{
+    background-color: rgb(182, 180, 180);
+}
+.table1 thead th{
+    padding: 6px;
+    color: rgb(59, 58, 58);
+    text-align: start;
+}
+.table1 tbody{
+    background-color: white;
+}
+.table1 tbody tr td{
+    padding: 6px;
+}
+
+.add-form{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: space-around;
+    display: flex;
+    padding-top: 20px;
+    background-color: white;
+}
+.add-form div{
+    margin-bottom: 5px;
+}
+.add-form input{
+    width: 100%;
+    border-radius: 2px;
+    padding: 7px;
+    border: 1px solid;
+
+}
+.imgCurve{
+    width: 40%;
+    height: 30vh;
+    margin-right: 10px;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+.flexDiv{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    height: 80vh;
+    overflow: scroll;
+    padding-bottom: 60px;
+}
+.flexDiv::-webkit-scrollbar{
+    display: none;
+}
+.textarea{
+    width: 100% !important;
+}
+.roomDivs{
+    width: 50%;
+}
+.add-form select{
+    width: 100%;
+}
+.add-form button{
+    width: 100%;
+    padding: 10px;
+}
+.sec-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-user{
+    background-color: white;
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 7px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.card-user div small{
+    color: gray;
+}
+.card-user button{
+    background-color: rgb(59, 58, 58);
+    color: white;
+    padding: 6px;
+    cursor: pointer;
+}
+.widdd{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}

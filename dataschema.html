@@ -1,0 +1,74 @@
+# I'll create a database schema diagram based on the provided tables and their relationships.
+# Using an ERD-style layout, where entities (tables) are connected based on their foreign key relationships.
+
+from graphviz import Digraph
+
+# Initialize the graph
+schema_diagram = Digraph('DatabaseSchema', filename='database_schema', format='png')
+schema_diagram.attr(rankdir='LR', size='10')
+
+# Define colors for styling
+table_color = '#f3f3f3'
+header_color = '#b3cde3'
+
+# Define table nodes with fields
+schema_diagram.node('User', '''<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD BGCOLOR="{header_color}"><B>User</B></TD></TR>
+<TR><TD BGCOLOR="{table_color}">user_id (PK)</TD></TR>
+<TR><TD>name</TD></TR>
+<TR><TD>email</TD></TR>
+<TR><TD>password</TD></TR>
+<TR><TD>user_type</TD></TR>
+<TR><TD>date_registered</TD></TR>
+</TABLE>>'''.format(header_color=header_color, table_color=table_color), shape='plaintext')
+
+schema_diagram.node('Property', '''<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD BGCOLOR="{header_color}"><B>Property</B></TD></TR>
+<TR><TD BGCOLOR="{table_color}">property_id (PK)</TD></TR>
+<TR><TD>owner_id (FK)</TD></TR>
+<TR><TD>title</TD></TR>
+<TR><TD>location</TD></TR>
+<TR><TD>price</TD></TR>
+<TR><TD>availability_status</TD></TR>
+<TR><TD>date_added</TD></TR>
+</TABLE>>'''.format(header_color=header_color, table_color=table_color), shape='plaintext')
+
+schema_diagram.node('Booking', '''<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD BGCOLOR="{header_color}"><B>Booking</B></TD></TR>
+<TR><TD BGCOLOR="{table_color}">booking_id (PK)</TD></TR>
+<TR><TD>tenant_id (FK)</TD></TR>
+<TR><TD>property_id (FK)</TD></TR>
+<TR><TD>start_date</TD></TR>
+<TR><TD>end_date</TD></TR>
+<TR><TD>booking_status</TD></TR>
+<TR><TD>date_booked</TD></TR>
+</TABLE>>'''.format(header_color=header_color, table_color=table_color), shape='plaintext')
+
+schema_diagram.node('Transaction', '''<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD BGCOLOR="{header_color}"><B>Transaction</B></TD></TR>
+<TR><TD BGCOLOR="{table_color}">transaction_id (PK)</TD></TR>
+<TR><TD>booking_id (FK)</TD></TR>
+<TR><TD>amount</TD></TR>
+<TR><TD>payment_status</TD></TR>
+<TR><TD>payment_date</TD></TR>
+</TABLE>>'''.format(header_color=header_color, table_color=table_color), shape='plaintext')
+
+schema_diagram.node('Notification', '''<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD BGCOLOR="{header_color}"><B>Notification</B></TD></TR>
+<TR><TD BGCOLOR="{table_color}">notification_id (PK)</TD></TR>
+<TR><TD>user_id (FK)</TD></TR>
+<TR><TD>message</TD></TR>
+<TR><TD>timestamp</TD></TR>
+</TABLE>>'''.format(header_color=header_color, table_color=table_color), shape='plaintext')
+
+# Define relationships (Foreign Keys)
+schema_diagram.edge('User', 'Property', label='owns', color='black', fontcolor='black', arrowhead='normal')
+schema_diagram.edge('User', 'Booking', label='makes', color='black', fontcolor='black', arrowhead='normal')
+schema_diagram.edge('Property', 'Booking', label='booked_for', color='black', fontcolor='black', arrowhead='normal')
+schema_diagram.edge('Booking', 'Transaction', label='has', color='black', fontcolor='black', arrowhead='normal')
+schema_diagram.edge('User', 'Notification', label='receives', color='black', fontcolor='black', arrowhead='normal')
+
+# Render diagram
+schema_diagram.render('/mnt/data/database_schema')
+
+'/mnt/data/database_schema.png'

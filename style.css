@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+body{
+    background-color: whitesmoke;
+}
+.navbar{
+    background-color: rgb(63, 62, 62);
+    padding: 10px;
+    display: flex;
+    color: rgb(245, 240, 240);
+    justify-content: space-between;
+    padding: 15px;
+}
+.titleA{
+    color: rgb(245, 240, 240) !important;
+}
+.navbar ul{
+    display: flex;
+    gap: 6rem;
+}
+
+.auth-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.loginForm{
+    background-color: white;
+    padding: 10px;
+    height: auto;
+    border-top: 2px solid rgb(102, 99, 99);
+    box-shadow: 4px 5px 5px rgb(230, 228, 228);
+}
+
+.loginForm form div{
+    margin-bottom: 20px;
+}
+.loginForm form div input{
+    width: 100%;
+    padding: 10px;
+}
+.flexReg{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.userDiv{
+    width: 20%;
+    display: flex;gap: 20px;
+}
+.flexcheck{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.flexcheck input{
+    width: unset !important;
+}
+.loginForm form div button{
+    width: 100%;
+    background-color: rgb(56, 54, 54);
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+}
+.navbar ul li{
+    list-style: none;
+}
+.btnRent{
+    margin-top: 20px !important;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(245, 240, 240);
+}
+.main-section{
+    display: flex;
+}
+.sideView{
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+}
+.sideView ul li{
+    margin-bottom: 40px;
+    list-style: none;
+}
+.sideView ul li button{
+    width: 100%;
+    text-align: center;
+    border: none;
+    color: rgb(102, 99, 99);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+}
+.top-section ul li button{
+    width: 100%;
+    text-align: center;
+    border: none;
+    color: rgb(102, 99, 99);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 6px;
+}
+.section-container{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    height: 80vh;
+    display: flex;
+    overflow: scroll;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-around;
+    width: 100%;
+}
+.top-bar{
+    width: 60%;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    box-shadow: 3px 4px 5px rgb(230, 228, 228);
+}
+.flexDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.rent-content{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.hide-box{
+    display: none !important;
+}
+.show-box{
+    display: flex !important;
+}
+.btnActive{
+    background-color: rgb(56, 54, 54);
+    color: white !important;
+}
+.section-container::-webkit-scrollbar{
+    display: none;
+}
+
+.top-section{
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.container-main{
+    width: 80%;
+}
+.top-section ul li{
+    list-style: none;
+    gap: 30px;
+}
+.top-section ul{
+    display: flex;
+    gap: 50px;
+}
+.card-item{
+    width: 40%;
+    height: 50vh;
+}
+.top-box{
+    padding: 20px;
+}
+.ViewDiv{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    color: white;
+    background-color: rgb(54, 58, 61);
+}
+.imgDiv{
+    width: 100%;
+    height: 100%;
+}
+.descDiv{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -90px;
+    padding: 10px;
+}
+
+.descDiv small{
+    color: rgb(56, 54, 54);
+}
+.btnRent{
+    background-color: whitesmoke;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btnRent:hover{
+    background-color: rgb(56, 54, 54);
+    color: white;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+.rent-box{
+    width: 60%;
+    border: white;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rent-imgDiv{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    height: 40vh;
+}
+.btnRentNow{
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+}
+.inputPay{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+.receipt{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: white;
+}
+.receipt div{
+    padding-bottom: 10px;
+    border-bottom: 1px dotted gray;
+}
+.flexEnd{
+    display: flex;
+    justify-content: end;
+    border-bottom: 0 !important;
+}
+.section-container-s-c1{
+    width: 100% !important;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.container-main1{
+    width: 100%;
+    padding: 10px;
+}
+
+.text-loc{
+    font-size:large;
+    color: rgb(102, 99, 99);
+}
+.rentsTable{
+    width: 100%;
+}
+.rentsTable thead{
+    background-color: beige;
+}
+
+.rentsTable thead th{
+    padding: 10px;
+    text-align: start;
+}
+
+.rentsTable tbody tr td{
+    padding: 10px;
+    font-size: 12px;
+}
+.rentsTable tbody tr td button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+}
+.descDiv small{
+    background:rgb(65, 66, 66);
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+.pop-black{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    background: #6788;
+}
+.pop-up{
+    width: 30%;
+    border-radius: 10px;
+    height: 30vh;
+    box-shadow: 4px 5px 5px #6788;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+.pop-up button{
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100px;
+    color: rgb(238, 230, 230);
+    border: none;
+    background-color: rgb(56, 54, 54);
+}
+.formContact{
+    width: 40%;
+    padding: 10px;
+}
+.formContact div{
+    margin-bottom: 10px;
+}
+.formContact div input{
+    width: 100%;
+    padding: 6px;
+}
+.formContact div textarea{
+    width: 100%;
+    padding: 6px;
+    height: 30vh;
+}
+.btnSend{
+    background-color: rgb(54, 58, 61);
+    color: white;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+}
